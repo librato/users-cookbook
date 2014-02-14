@@ -1,12 +1,22 @@
-= DESCRIPTION:
+Description
+===========
 
-Creates users with +authorized_keys+.
+Creates users from a databag search.
 
-= REQUIREMENTS:
+Requirements
+============
+
+Platform
+--------
+
+* Debian, Ubuntu
+* CentOS, Red Hat, Fedora
+* FreeBSD
 
 Data bag named "users" must exist. See USAGE.
 
-= USAGE:
+Usage
+=====
 
 There are two ways to use this cookbook. You can set up a sysadmin group and users,
 or you can create normal users en masse.
@@ -65,7 +75,7 @@ Create a user.
     knife data bag users bofh
     {
       "id": "bofh",
-      "ssh_keys": "",
+      "ssh_keys": "ssh-rsa AAAAB3Nz...yhCw== bofh",
       "groups": "sysadmin",
       "uid": 2001,
       "shell": "\/bin\/bash",
@@ -96,13 +106,19 @@ The sysadmin group will be created with GID 2300. This may become an attribute a
 The Apache cookbook can set up authentication using OpenIDs, which is set up using the openid key here.
 See the Opscode 'apache2' cookbook for more information about this.
 
-= LICENSE and AUTHOR:
+License and Author
+==================
 
 Author:: Joshua Timberman (<joshua@opscode.com>)
+Author:: Seth Chisamore (<schisamo@opscode.com>)
 
+<<<<<<< HEAD:README.rdoc
 Author:: Craig S. Cottingham (<craig.cottingham@gmail.com>)
 
 Copyright:: 2009, Opscode, Inc
+=======
+Copyright:: 2009-2011, Opscode, Inc
+>>>>>>> master:README.md
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
